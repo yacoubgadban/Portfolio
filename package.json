@@ -4,7 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/yacoubgadban/portfolio/issues"
   },
-  "homepage": "https://github.com/yacoubgadban/portfolio#readme"
+  "homepage": "https://github.com/yacoubgadban/portfolio#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "concurrently": "^6.5.1",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
 }
